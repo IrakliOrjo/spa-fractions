@@ -33,17 +33,17 @@ const Search = ({}) => {
   const handleSearch = (e) => {
      setWarningMsg('');
 
-    // Validate selected category and search term
+    //check that user has selected category
     if (!selectedCategory) {
       setWarningMsg('Please select a category');
       return;
     }
-
+    // check if at least 3 characters are input in search
     if (searchTerm.length < 3) {
       setWarningMsg('Search term must be at least 3 characters.');
       return;
     }
-     
+     //dispatch depending on category
      switch(selectedCategory){
          case 'characters':
             dispatch(searchCharacter(searchTerm));

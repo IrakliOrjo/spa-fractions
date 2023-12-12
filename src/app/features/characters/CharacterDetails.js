@@ -26,11 +26,7 @@ const CharacterDetails = ({ Corporation }) => {
 
 
     let content;
-    if(characterStatus === 'loading'){
-        content = <p>Loading...</p>
-    } else if(characterStatus === 'failed') {
-        content = <p>{error}</p>
-    } else if(characterStatus === 'success'){
+   if(characterStatus === 'success'){
         const readyCharacter = characters
         content = readyCharacter
     }

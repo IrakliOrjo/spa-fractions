@@ -32,11 +32,7 @@ const FactionList = () => {
     }, [factionStatus, dispatch])
 
     let content;
-    if(factionStatus === 'loading'){
-        content = <p>Loading...</p>
-    } else if(factionStatus === 'failed') {
-        content = <p>{error}</p>
-    } else if(factionStatus === 'success'){
+    if(factionStatus === 'success'){
         const readyFactions = factions
         content = readyFactions
     }
