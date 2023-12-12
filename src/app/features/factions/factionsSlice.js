@@ -8,6 +8,7 @@ const CORPORATION_NAME_URL = 'https://esi.evetech.net/legacy/corporations'
 
 const initialState = {
     factions: [],
+   
     solarName: null,
     corporationName: null,
     status: 'idle',
@@ -33,10 +34,12 @@ export const fetchCorporationName = createAsyncThunk('factions/fetchCorporationN
 });
 
 
+
 const factionsSlice = createSlice({
     name: 'factions',
     initialState,
     reducers: {
+     
     },
     extraReducers(builder) {
         //reducers for fetchin factions
@@ -81,6 +84,8 @@ const factionsSlice = createSlice({
 })
 
 export const selectAllFactions = (state) => state.factions.factions
+
+
 export const getFactionsStatus = (state) => state.factions.status
 export const getFactionsError = (state) => state.factions.error
 export const getSolarName = (state) => state.factions.solarName

@@ -61,7 +61,7 @@ const CharacterDetails = ({ Corporation }) => {
               onClick={() => {showRaceInfo()}}
               >{'<'} Go Back</p>
               <p className='text-[2rem] font-semibold'>Name: {content?.name}</p>
-              <p className='text-[1.8rem]'>Birthday: {content?.birthday}</p>
+              <p className='text-[1.8rem]'>Birthday: {content?.birthday.slice(0,10).split('-').reverse().join('-')}</p>
               <p className='text-[1.5rem]'>Race: {race.filter(item => item.race_id === content.race_id)[0]?.name} </p>
               
         </div>}
